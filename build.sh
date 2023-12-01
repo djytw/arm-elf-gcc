@@ -18,6 +18,7 @@ ROOTDIR=`pwd`
 PATH="$ROOTDIR/target/bin:$PATH"
 
 sed -i -e 's/MULTILIB_OPTIONS     = marm\/mthumb/MULTILIB_OPTIONS     = marm\/mthumb mno-thumb-interwork\/mthumb-interwork/' $ROOTDIR/gcc-4.3.2/gcc/config/arm/t-arm-elf 
+sed -i -e 's/MULTILIB_DIRNAMES    = arm thumb/MULTILIB_DIRNAMES    = arm thumb normal interwork/' $ROOTDIR/gcc-4.3.2/gcc/config/arm/t-arm-elf
 
 cd $ROOTDIR/build/binutils-2.19
 ../../binutils-2.19.1/configure --target=arm-elf --prefix="$ROOTDIR/target/" --enable-interwork --enable-multilib --with-float=soft --disable-werror
