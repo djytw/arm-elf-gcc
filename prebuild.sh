@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y libncurses5-dev libgmp-dev libmpfr-dev bzip2
+sudo apt install -y libncurses5-dev libgmp-dev libmpfr-dev bzip2 libx11-dev
 sudo apt remove -y texinfo
 rm -rf texinfo-4.13
 
